@@ -273,7 +273,7 @@ else
                     $files = explode($biaoqianDownImageSpan,$file);
                     $resultFiles = '';
                     foreach($files as $f){
-                        $result = SougouApiUpload($f,$biaoqianDownImageReferer);
+                        $result = ImageApiUpload($f,$biaoqianDownImageReferer);
                         $LabelArray['图床图片日志'] = $LabelArray['图床图片日志'].$result['msg'];
                         #$LabelArray['图床图片日志'] = $result["imgBase64"];
                         if(($result["code"] === '1') and !empty($result["img"])){
