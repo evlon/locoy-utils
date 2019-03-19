@@ -72,7 +72,9 @@ function SougouApiUpload($file,$referer){
     curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
+    // curl_setopt($ch, CURLOPT_PROXYAUTH, CURLAUTH_BASIC); //代理认证模式  
+    // curl_setopt($ch, CURLOPT_PROXY, "127.0.0.1"); //代理服务器地址  
+    // curl_setopt($ch, CURLOPT_PROXYPORT, 8888); //代理服务器端口
 
     $result=curl_exec($ch);
     curl_close($ch);
